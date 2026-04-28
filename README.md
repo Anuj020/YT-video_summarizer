@@ -72,7 +72,9 @@ AgenticAI/
 ```
 
  ### 4️⃣ Add Environment Variables
-        ### Create a .env file in the project root:
+ ``` text
+    Create a .env file in the project root:
+```
 ```ini
         OPENAI_API_KEY=your_key
 ```
