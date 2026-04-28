@@ -21,10 +21,9 @@ Instead of a single LLM call, this system simulates a real-world AI team with sp
 
 - CrewAI (Multi-agent orchestration)
 - LangChain
-- OpenAI / Google Gemini LLM
-- YouTube + Serper Search Tools
+- OpenAI
+- YouTube
 - Python
-- dotenv
 - RAG-style tool-based memory
 
 ---
