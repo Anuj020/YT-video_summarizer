@@ -2,82 +2,101 @@
 
 An AI-powered multi-agent system that extracts insights from YouTube videos and converts them into structured blog content using CrewAI, LangChain, and LLMs.
 
----
-
 ## 🧠 Project Overview
 
-This project demonstrates a **multi-agent AI workflow** where agents collaborate to:
+This project builds a multi-agent system where different AI agents collaborate to research YouTube videos and generate structured blog content.
 
-- 🔍 Research YouTube video content based on a topic  
-- 🎥 Extract relevant insights using search tools  
-- ✍️ Generate structured blog-style summaries  
-- 🤖 Work together using CrewAI orchestration  
-
-Instead of a single LLM call, this system simulates a real-world AI team with specialized roles.
-
----
+The system:
+- Takes a topic as input
+- Finds relevant YouTube content
+- Extracts insights using tools
+- Generates a clean blog-style summary
 
 ## ⚙️ Tech Stack
 
-- CrewAI (Multi-agent orchestration)
+- CrewAI
 - LangChain
-- OpenAI
-- YouTube
+- OpenAI / Gemini LLM
 - Python
-- RAG-style tool-based memory
-
----
+- Serper API
+- YouTube tools
+- dotenv
 
 ## 🏗️ Architecture
 
-User Input (Topic)
-        ↓
-Research Agent (YouTube/Search Tools)
-        ↓
-Processed Insights
-        ↓
-Writer Agent
-        ↓
-Final Blog Output (.md file)
-
----
+User Input (Topic) → Research Agent → Data Extraction → Writer Agent → Final Blog Output (.md)
 
 ## 🤖 Agents
 
-### 🔍 Blog Researcher Agent
-- Searches and gathers relevant YouTube video content  
-- Extracts useful insights  
-- Passes structured information to writer agent  
+Blog Researcher Agent:
+- Searches YouTube content
+- Extracts key insights
+- Passes structured data forward
 
-### ✍️ Blog Writer Agent
-- Converts research into structured blog content  
-- Simplifies technical concepts  
-- Produces final markdown output  
-
----
+Blog Writer Agent:
+- Converts research into readable blog format
+- Simplifies technical content
+- Generates final markdown output
 
 ## 🧰 Tools Used
 
-- SerperDevTool → Web search  
-- YoutubeChannelSearchTool → YouTube content extraction  
-
----
+- SerperDevTool (web search)
+- YoutubeChannelSearchTool (YouTube extraction)
 
 ## 📁 Project Structure
 
 AgenticAI/
-│── crewAI.py          # Main execution file  
-│── agents.py          # Agent definitions  
-│── tasks.py           # Task workflow  
-│── tools.py           # Tools setup  
-│── new-blog-post.md   # Output file  
-│── .env               # API keys (not committed)  
-
----
+│── crewAI.py
+│── agents.py
+│── tasks.py
+│── tools.py
+│── new-blog-post.md
+│── .env
 
 ## 🚀 Setup Instructions
 
-### 1. Clone repository
-```bash
 git clone https://github.com/Anuj020/YT-video_summarizer.git
 cd YT-video_summarizer
+
+python -m venv venv
+source venv/bin/activate
+
+pip install -r requirements.txt
+
+Create .env file:
+GOOGLE_API_KEY=your_key
+OPENAI_API_KEY=your_key
+SERPER_API_KEY=your_key
+
+Run project:
+python crewAI.py
+
+## 📌 Output
+
+Generated blog is saved in:
+new-blog-post.md
+
+## 🧩 Key Learnings
+
+- Multi-agent system design using CrewAI
+- Tool-augmented LLM pipelines
+- Real-world AI workflow orchestration
+- Debugging API + tool + loader issues
+- Building modular AI systems
+
+## ⚠️ Future Improvements
+
+- Add UI using Streamlit or FastAPI
+- Improve YouTube scraping reliability
+- Add memory to agents
+- Deploy as web app
+- Add logging and monitoring
+
+## 👨‍💻 Author
+
+Anuj Patel  
+GitHub: https://github.com/Anuj020
+
+## ⭐ Support
+
+If you like this project, give it a star on GitHub
