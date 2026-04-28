@@ -55,18 +55,29 @@ AgenticAI/
 
 ## 🚀 Setup Instructions
 
-git clone https://github.com/Anuj020/YT-video_summarizer.git
-cd YT-video_summarizer
+###  1️⃣ Clone Repository
+```bash
+    git clone https://github.com/Anuj020/YT-video_summarizer.git
+    cd YT-video_summarizer
+```
 
-python -m venv venv
-source venv/bin/activate
+  ###  2️⃣ Create Virtual Environment
+```bash
+    python -m venv venv
+    source venv/bin/activate
+```
+   ### 3️⃣ Install Requirements
+```bash
+    pip install -r requirements.txt
+```
 
-pip install -r requirements.txt
+ ### 4️⃣ Add Environment Variables
+        Create a .env file in the project root:
+```ini
+        OPENAI_API_KEY=your_key
+```
 
-Create .env file:
-GOOGLE_API_KEY=your_key
-OPENAI_API_KEY=your_key
-SERPER_API_KEY=your_key
+
 
 Run project:
 python crewAI.py
@@ -84,13 +95,7 @@ new-blog-post.md
 - Debugging API + tool + loader issues
 - Building modular AI systems
 
-## ⚠️ Future Improvements
 
-- Add UI using Streamlit or FastAPI
-- Improve YouTube scraping reliability
-- Add memory to agents
-- Deploy as web app
-- Add logging and monitoring
 
 ## 👨‍💻 Author
 
