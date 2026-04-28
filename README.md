@@ -44,7 +44,7 @@ Blog Writer Agent:
 - YoutubeChannelSearchTool (YouTube extraction)
 
 ## 📁 Project Structure
-
+```bash
 AgenticAI/
 │── crewAI.py
 │── agents.py
@@ -52,6 +52,8 @@ AgenticAI/
 │── tools.py
 │── new-blog-post.md
 │── .env
+```
+
 
 ## 🚀 Setup Instructions
 
@@ -72,9 +74,7 @@ AgenticAI/
 ```
 
  ### 4️⃣ Add Environment Variables
- ``` text
-    Create a .env file in the project root:
-```
+
 ```ini
         OPENAI_API_KEY=your_key
 ```
